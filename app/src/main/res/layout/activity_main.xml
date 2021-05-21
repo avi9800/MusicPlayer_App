@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#363636"
+    tools:context=".activities.MainActivity">
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.NoActionBar">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tablayout"
+        app:tabIndicatorColor="#FD6A02"
+        app:tabMode="fixed"
+        app:tabGravity="fill"/>
+    
+</com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/player_layout"
+        android:id="@+id/viewpager"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/pd"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/player_layout">
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:id="@+id/Feed_Recyclerview_seekbar"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Feed_Recyclerview_seekbar"
+            android:text="SongName"
+            android:paddingLeft="10dp"
+            android:layout_toLeftOf="@+id/playing_button_player_layout"
+            android:textSize="15dp"
+            android:gravity="center_vertical"
+            android:id="@+id/now_playing"/>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
